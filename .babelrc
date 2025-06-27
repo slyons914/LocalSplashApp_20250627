@@ -1,0 +1,31 @@
+{
+  "presets": ["module:metro-react-native-babel-preset"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@api": "./src/api",
+          "@assets": "./assets",
+          "@utils": "./src/utils",
+          "@store": "./src/store",
+          "@screens": "./src/screens",
+          "@providers": "./src/providers",
+          "@telephony": "./src/telephony",
+          "@navigation": "./src/navigation",
+          "@components": "./src/components",
+          "@modals": "./src/modals",
+          "@models": "./src/models"
+        }
+      }
+    ],
+    [
+      "module:react-native-dotenv",
+      {
+        "envName": "APP_ENV",
+        "moduleName": "@env",
+        "path": ".env"
+      }
+    ]
+  ]
+}

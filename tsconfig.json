@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "types": ["node", "react-native"],
+    "lib": ["es2019"],
+    "jsx": "react-native",
+    "noEmit": true,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@api": ["./src/api"],
+      "@assets/*": ["./assets/*"],
+      "@models/*": ["./src/models/*"],
+      "@models": ["./src/models"],
+      "@store": ["./src/store"],
+      "@utils/*": ["./src/utils/*"],
+      "@telephony/*": ["./src/telephony/*"],
+      "@screens": ["./src/screens"],
+      "@providers": ["./src/providers"],
+      "@navigation": ["./src/navigation"],
+      "@components": ["./src/components"],
+      "@modals": ["./src/modals"],
+      "@modals/*": ["./src/modals/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

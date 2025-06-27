@@ -1,0 +1,67 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": ["tsconfig.json"],
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-native", "eslint-plugin-import", "@typescript-eslint"],
+  "ignorePatterns": ["node_modules/**"],
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "quotes": ["error", "double"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": "error",
+    "func-style": ["error", "expression"],
+    "import/prefer-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": ["external", "internal"],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "pathGroups": [
+          { "pattern": "react", "group": "external", "position": "before" },
+          { "pattern": "react-native", "group": "external", "position": "before" },
+          { "pattern": "@assets/*", "group": "internal" },
+          { "pattern": "@navigation", "group": "internal" },
+          { "pattern": "@providers", "group": "internal" },
+          { "pattern": "@telephony", "group": "internal" },
+          { "pattern": "@screens", "group": "internal" },
+          { "pattern": "@modals", "group": "internal" },
+          { "pattern": "@components", "group": "internal" },
+          { "pattern": "@store", "group": "internal" },
+          { "pattern": "@models/*", "group": "internal" },
+          { "pattern": "@models", "group": "internal" },
+          { "pattern": "@utils/**", "group": "internal" },
+          { "pattern": "@api", "group": "internal" },
+          { "pattern": "@env", "group": "internal" }
+        ]
+      }
+    ],
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "react-native/no-inline-styles": "error",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-unnecessary-condition": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+  }
+}
